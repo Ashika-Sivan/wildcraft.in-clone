@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wildcraft clone | Srirag H | Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- glide css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="nav-container fixed-top bg-white py-3">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <div class="">
+                <span class="fa-solid fa-bars d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                    aria-controls="offcanvasExample">
+                </span>
+                <img src="images/logo.jpg" alt="wildcraft-logo" width="140px" height="60px">
+            </div>
+            <div class="search-container d-none d-md-flex justify-content-between ">
+                <input type="text" placeholder="search">
+                <div class="fa-solid fa-magnifying-glass"></div>
+            </div>
+            <div class="navbar-icons-container">
+                <span class="fa-solid fa-magnifying-glass d-md-none"></span>
+                <span class="fa-regular fa-user"></span>
+                <span class="fa-regular fa-heart"></span>
+                <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+            <!-- offcanvas for larger screens -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Main Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <span class="offcanvas-item">SIGN IN/REGISTER</span>
+                    <hr>
+                    <span class="offcanvas-item">MEN</span>
+                    <hr>
+                    <span class="offcanvas-item">WOMEN</span>
+                    <hr>
+                    <span class="offcanvas-item">KIDS & TEENS</span>
+                    <hr>
+                    <span class="offcanvas-item">PACKS & LUGGAGE</span>
+                    <hr>
+                    <span class="offcanvas-item">CLOTHING & ESSENTIALS</span>
+                    <hr>
+                    <span class="offcanvas-item">FOOTWEAR</span>
+                    <hr>
+                    <span class="offcanvas-item">FIND A STORE</span>
+                    <hr>
+                    <span class="offcanvas-item">BULK ENQUIRY</span>
+                    <hr>
+                    <span class="offcanvas-item">BLOG</span>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar for largerscreens -->
+        <nav class="products-navbar container d-md-flex justify-content-center d-none mt-4">
+            <span class="product-navbar-item mx-3 fw-semibold">MEN</span>
+            <span class="product-navbar-item mx-3 fw-semibold">WOMEN</span>
+            <span class="product-navbar-item mx-3 fw-semibold">KIDS & TEENS</span>
+            <span class="product-navbar-item mx-3 fw-semibold">PACKS & LUGGAGE</span>
+            <span class="product-navbar-item mx-3 fw-semibold">CLOTHING & ESSENTIALS</span>
+            <span class="product-navbar-item mx-3 fw-semibold">FOOTWEAR</span>
+        </nav>
+    </nav>
+
+    <!-- hero section carousel -->
+    <div class="hero-carousel">
+        <div class="hero-section-glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img class="hero-slider-img d-none d-lg-flex" src="images/hero-slider/hero-slide1.jpg" alt="Image 1">
+                        <img class="hero-slider-img d-lg-none d-flex" src="images/hero-slider/hero-slide-mob-1.jpg" alt="">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="hero-slider-img d-none d-lg-flex" src="images/hero-slider/hero-slide2.jpg" alt="Image 2">
+                        <img class="hero-slider-img d-lg-none d-flex" src="images/hero-slider/hero-slide-mob-2.jpg" alt="">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="hero-slider-img d-none d-lg-flex" src="images/hero-slider/hero-slide3.jpg" alt="Image 3">
+                        <img class="hero-slider-img d-lg-none d-flex" src="images/hero-slider/hero-slide-mob-3.jpg" alt="">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="hero-slider-img d-none d-lg-flex" src="images/hero-slider/hero-slide4.jpg" alt="Image 4">
+                        <img class="hero-slider-img d-lg-none d-flex" src="images/hero-slider/hero-slide-mob-4.jpg" alt="">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="hero-slider-img d-none d-lg-flex" src="images/hero-slider/hero-slide5.jpg" alt="Image 5">
+                        <img class="hero-slider-img d-lg-none d-flex" src="images/hero-slider/hero-slide-mob-5.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="hero-section-glide__bullets d-none d-md-flex" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+                <button class="glide__bullet" data-glide-dir="=4"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- features container -->
+    <div class="features-container container">
+        <div class="row text-center">
+            <div class="col-4 d-flex flex-column flex-md-row feature-col border-2 border-warning border-end">
+                <img src="images/features/feature1.jpg" alt="feature image" class="img-fluid">
+                <div class="features-text-container text-start mx-4">
+                    <div class="feature-title fw-semibold d-none d-md-flex">FREE SHIPPING</div>
+                    <div class="feature-description d-none d-md-flex">Free shipping for all orders</div>
+                </div>
+                <div class="fs-6 feature-title fw-semibold d-block text-start d-md-none">FREE SHIPPING</div>
+            </div>
+            <div class="col-4 d-flex flex-column flex-md-row feature-col border-2 border-warning border-end">
+                <img src="images/features/feature2.jpg" alt="feature image" class="img-fluid">
+                <div class="features-text-container text-start mx-4">
+                    <div class="feature-title fw-semibold d-none d-md-flex">EASY RETURNS</div>
+                    <div class="feature-description d-none d-md-flex">Simply return it within 7 days</div>
+                </div>
+                <div class="fs-6 feature-title fw-semibold d-block text-start d-md-none">EASY RETURNS</div>
+            </div>
+            <div class="col-4 d-flex flex-column flex-md-row feature-col">
+                <img src="images/features/feature3.jpg" alt="feature image" class="img-fluid">
+                <div class="features-text-container text-start mx-4">
+                    <div class="feature-title fw-semibold d-none d-md-flex">CASH ON DELIVERY</div>
+                    <div class="feature-description d-none d-md-flex">COD available up to ₹2999</div>
+                </div>
+                <div class="fs-6 feature-title fw-semibold d-block text-start d-md-none">CASH ON DELIVERY</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wildcraft exclusives section -->
+    <div class="exclusives-container container">
+        <div class="exclusives-heading">WILDCRAFT EXCLUSIVES</div>
+
+        <div class="product-container">
+            <div class="exclusive-producuts-glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="images/bag1.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">EVO BACKPACK 15L MAGENTA</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://n2.sdlcdn.com/imgs/b/y/v/Wildcraft-Peza-Black-Black-Polyester-SDL898893995-1-13c71.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">EVO BACKPACK 15L MAGENTA</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://assets.ajio.com/medias/sys_master/root/h5c/h3e/10967029645342/-473Wx593H-460169403-green-OUTFIT.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">EVO BACKPACK 15L MAGENTA</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://th.bing.com/th/id/R.c3ebcf66f24ae7abe6bbe8557ed4e4f2?rik=lHMKrM9J1%2bQXOw&riu=http%3a%2f%2fassets.myntassets.com%2fassets%2fimages%2f12357086%2f2022%2f4%2f25%2f4a210414-65a4-4a06-ad20-2a2a7d2864a01650886488243-Travel-Pro-40-8251650886487590-1.jpg&ehk=voWPifxEHX7aRmQyvNhJ%2blet24XuhRCn77BH4eU64dE%3d&risl=&pid=ImgRaw&r=0" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">EVO BACKPACK 15L MAGENTA</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/10293737/2019/8/7/b4a72904-2daa-409f-9138-72585b08c0e91565178384244-Wildcraft-Women-Green-Graphic-Backpack-2171565178382073-1.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">EVO BACKPACK 15L MAGENTA</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- essential part of adventure pic -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="images/essential part of adventure.jpg" alt="essential part of adventure banner" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column align-items-md-start justify-content-center text-center">
+                <div class="essential-title my-3">ESSENTIAL PART OF EVERY ADVENTURE!</div>
+                <div class="essential-content lead my-3">Introducing the widest range of travel essentials from the house of Wildcraft</div>
+                <button class="btn explore-range btn-transparent border-danger px-4 py-2 my-3 text-danger">EXPLORE THE RANGE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- essentials 2 section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12 my-2">
+                <div class="essential-image-container">
+                    <img src="images/ready to go.jpg" class="img-fluid" alt="Image 1">
+                </div>
+            </div>
+            <div class="col-md-6 col-12 my-2">
+                <div class="essential-image-container">
+                    <img src="images/for everyday adventure.jpg" class="img-fluid" alt="Image 2">
+                </div>
+            </div>
+       `</div>
+    </div>
+
+    <!-- different bags container -->
+    <div class="container">
+        <div class="d-md-row d-flex overflow-auto">
+            <div class="col-7 col-md-4 px-1 essential-image-container">
+                <img class="img-fluid" src="images/AR Bag.jpg" alt="">
+            </div>
+            <div class="col-7 col-md-4 px-1 essential-image-container">
+                <img class="img-fluid" src="images/CR Bag.jpg" alt="">
+            </div>
+            <div class="col-7 col-md-4 px-1 essential-image-container">
+                <img class="img-fluid" src="images/FR Bag.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- best seller container -->
+    <div class="exclusives-container container">
+        <div class="exclusives-heading">BEST SELLERS</div>
+    
+        <div class="product-container">
+            <div class="best-sellers-glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+    
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="images/best-seller.jpg" class="card-img-top img-fluid" alt="...">
+                                    
+                            
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">Men Outdoor Wind Cheater Trekking Jacket - Orange</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://wildcraft.com/media/catalog/product/1/_/1_1370_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=" class="card-img-top img-fluid" alt="...">
+                                   
+                            
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">Men Outdoor Wind Cheater Trekking Jacket - Black</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/productimage/2021/2/17/e30aace6-fbf7-430b-8007-34ec6fc929531613550817529-1.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">Men Outdoor Wind Cheater Trekking Jacket - Black</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="https://assets.myntassets.com/assets/images/24560498/2023/10/3/dc78655f-12c6-4933-9a65-0c85959ea30a1696313446270-Wildcraft-Men-Jackets-9981696313445805-1.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">Men Outdoor Wind Cheater Trekking Jacket - Orange</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="images/best-seller.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">Men Outdoor Wind Cheater Trekking Jacket - Orange</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                            <div class="exclusive-products-card card">
+                                <div class="image-container">
+                                    <img src="images/best-seller.jpg" class="card-img-top img-fluid" alt="...">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="product-info-container text-center">
+                                        <div class="product-name fw-bold">Men Outdoor Wind Cheater Trekking Jacket - Orange</div>
+                                        <div class="product-price fw-bold ">₹2499</div>
+                                    </div>
+                                    <hr>
+                                    <div class="color-selection-container">
+                                        <div class="">
+                                            <span class="bg-danger px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-primary px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-info px-2 m-1 rounded-circle"></span>
+                                            <span class="bg-success px-2 m-1 rounded-circle"></span>
+                                            <span class="text-dark px-2 m-1">+5</span>
+                                        </div>
+                                        <div class="fs-6">
+                                            Free Size
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- explore collections -->
+    <div class="container my-5">
+        <div class="fw-semibold display-6 text-start">EXPLORE COLLECTIONS</div>
+        <div class="d-md-row d-flex overflow-auto my-3">
+            <div class="col-8 col-md-3 px-1 essential-image-container">
+                <img class="img-fluid" src="images/explore-collections/trekking_shoes.jpg" alt="">
+            </div>
+            <div class="col-8 col-md-3 px-1 essential-image-container">
+                <img class="img-fluid" src="https://i.ytimg.com/vi/uahiUJUjGUY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAuNAiy5cAJxrENAM4m--UxXNEDqQ" alt="">
+            </div>
+            <div class="col-8 col-md-3 px-1 essential-image-container">
+                <img class="img-fluid" src="https://i.ytimg.com/vi/ido_4kzBYnI/maxresdefault.jpg" alt="">
+            </div>
+            <div class="col-8 col-md-3 px-1 essential-image-container">
+                <img class="img-fluid" src="https://m.media-amazon.com/images/I/91FtJ8FkycL._AC_UY300_.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- top selling product -->
+    <div class="container">
+        <div class="fs-2 fw-semibold my-3">OUR TOP SELLING PRODUCT</div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img class="img-fluid" src="images/top-selling.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-6 mb-4 mt-2 mt-md-0"> <img class="img-fluid" src="images/top-selling.jpg" alt="top selling image"> </div>
+                    <div class="col-6 mb-4 mt-2 mt-md-0"> <img class="img-fluid" src="images/top-selling.jpg" alt="top selling image"> </div>
+                    <div class="col-6 mb-4 mt-2 mt-md-0"> <img class="img-fluid" src="images/top-selling.jpg" alt="top selling image"> </div>
+                    <div class="col-6 mb-4 mt-2 mt-md-0"> <img class="img-fluid" src="images/top-selling.jpg" alt="top selling image"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- enquiry section -->
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="text-center px-md-5">
+                <img class="img-fluid my-3" src="images/features/corporate-gift.jpg" alt="">
+                <div class="enquiry-title">CORPORATE GIFTING & ENQUIRY</div>
+                <p class="d-none d-lg-block enquiry-content">
+                    Spanning across a diverse range of categories, .
+                    our products form the perfect head-to-toe outfit
+                    for aspiring Adventurers
+                </p>
+                <div class="text-danger enquiry-link">GET IN TOUCH</div>
+            </div>
+            <div class="text-center px-md-5">
+                <img class="img-fluid my-3" src="images/features/signup-for-circle.jpg" alt="">
+                <div class="enquiry-title">SIGN UP FOR THE CIRCLE PROGRAM</div>
+                <p class="d-none d-lg-block enquiry-content">
+                    Discover the Circle of Confidence to Step Out
+                    #HainTaiyaarHum
+                    #ReadyForAnything
+                </p>
+                <div class="text-danger enquiry-link">KNOW MORE</div>
+
+            </div>
+            <div class="text-center px-md-5">
+                <img class="img-fluid my-3" src="images/features/find-store.jpg" alt="">
+                <div class="enquiry-title">FIND AN EXCLUSIVE WILDCRAFT STORE</div>
+                <p class="d-none d-lg-block enquiry-content">
+                    These stores also double up as Wildcraft India’s
+                    authorized service centers across the country for
+                    Wildcraft®, WiKi® and TorQ™ products
+                </p>
+                <div class="text-danger enquiry-link">FIND A STORE</div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-main-container container-fluid p-5">
+        <div class="contactNsocial-container d-flex flex-column flex-lg-row justify-content-between align-items-start">
+            <div class="contact-container text-start">
+                <div class="fs-6 fw-semibold">Sign Up for The Circle Program</div>
+                <div class="fs-6 fw-light mt-md-3">Subscribe to receive updates, access to exclusive deals, and more.</div>
+                <div class="subscription-container">
+                    <input type="text" name="" class="email-input" placeholder="you@email.com">
+                    <span class="join-us-btn">JOIN US</span>
+                </div>
+            </div>
+            <div class="social-media-container my-5 my-lg-0">
+                <div class=" text-start text-lg-end">
+                    <div class="fs-4 mx-1 fa-brands text-secondary fa-facebook-f"></div>
+                    <div class="fs-4 mx-1 fa-brands text-secondary fa-instagram"></div>
+                    <div class="fs-4 mx-1 fa-brands text-secondary fa-linkedin"></div>
+                    <div class="fs-4 mx-1 fa-brands text-secondary fa-twitter"></div>
+                    <div class="fs-4 mx-1 fa-brands text-secondary fa-whatsapp"></div>
+                    <div class="fs-4 mx-1 fa-brands text-secondary fa-youtube"></div>
+                </div>
+                <div class="d-flex mt-md-3  text-start text-lg-end">
+                    <img class="" width="150px" height="60px" src="https://pluspng.com/img-png/get-it-on-google-play-badge-png-get-it-on-google-play-646.png" alt="">
+                    <img class="" width="150px" height="60px" src="https://pluspng.com/img-png/download-on-app-store-png-download-1272.png" alt="">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- quick links container for large screens -->
+        <div class="quick-links-container d-none d-lg-block">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Shop for Men</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Shop for Woman</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Shop for Kids</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Popular Products</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Shop</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Wararnty</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Help</div>
+                    <div class="quick-links-item my-1">Online Ordering</div>
+                    <div class="quick-links-item my-1">Returns & Refunds Policy</div>
+                    <div class="quick-links-item my-1">Public Notice</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quick-link-title fw-semibold text-start my-2">Explore</div>
+                    <div class="quick-links-item my-1">Clothing</div>
+                    <div class="quick-links-item my-1">Rainwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                    <div class="quick-links-item my-1">Footwear</div>
+                </div>
+            </div>
+
+            <div class="row text-start my-3">
+                <div class="p font-semibold">POPULAR SEARCHES</div>
+                <small>Sweatshirts & Pullovers | Travel Cases | Backpacks | Men's Jacket & Cheater | Laptop Backpacks | Men's Shirts & T-shirt
+                | Rucksacks | Daypacks | Men's Tracksuits | Shoes | Sandals | Duffle Bags | Duffle Trolley | Women Shirts & T-Shirt</small>
+            </div>
+        </div>
+
+        <!-- quick links container for small screens -->
+        <div class="quick-links-container d-block d-lg-none my-3">
+            <!-- accordion -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Shop for Men
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Clothing</p>
+                            <p>Rainwear</p>
+                            <p>Footwear</p>
+                            <p>Accessories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Shop for Women
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Clothing</p>
+                            <p>Rainwear</p>
+                            <p>Footwear</p>
+                            <p>Accessories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Shop for Kids
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Clothing</p>
+                            <p>Rainwear</p>
+                            <p>Footwear</p>
+                            <p>Accessories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright-container d-flex justify-content-between flex-column flex-lg-row">
+            <div class="copyright my-1 my-lg-0 lead fw-semibold">© 2023 Wildcraft. All Rights Reserved.</div>
+            <div class="copyright my-1 my-lg-0">Terms & Conditions / Privacy Policy</div>
+            <div class="copyright my-1 my-lg-0">
+                <img src="https://wildcraft.com/visa-card-pnw.png" alt="visa card">
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Link Glide.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="glide.js"></script>
+</body>
+
+</html>
